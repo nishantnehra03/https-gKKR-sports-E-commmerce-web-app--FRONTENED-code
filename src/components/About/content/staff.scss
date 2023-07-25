@@ -1,0 +1,111 @@
+@import "../../../css-config/mixins.scss";
+
+.staff {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  //margin-top: 30px;
+  margin-bottom: 0;
+  //background-color: white;
+  
+  .title {
+    color: black;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 20px;
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 5px;
+
+      width: 50px;
+      height: 3px;
+      background-color: blueviolet;
+      @include md {
+        margin-top: 10px;
+      }
+    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    .set-1 {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      @include md {
+        flex-direction: row;
+      
+        gap: 20px;
+      }
+      .item {
+        width: 100%;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+       
+          border-radius: 10px;
+
+        @include md {
+          height: 350px;
+          margin-bottom: 50px;
+    
+        }
+
+        img {
+          transition: all ease 0.3s;
+          display: block;
+          width: 200px;
+          height: 180px;
+          border-bottom: 2px solid purple;
+         
+          @include md {
+            height: 200px;
+            
+          }
+        }
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+
+        .owner-details {
+          display: flex;
+          flex-direction: column;
+          .name {
+            font-size: 17px;
+            margin-top: 24px;
+            color: aliceblue;
+            font-weight: 900;
+            display: block;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+           
+            @include md {
+              font-size: 20px;
+              margin-bottom: 10px;
+              margin-top: 21px;
+            }
+          }
+          .profession {
+            font-size: 14px;
+            color: white;
+            @include md {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

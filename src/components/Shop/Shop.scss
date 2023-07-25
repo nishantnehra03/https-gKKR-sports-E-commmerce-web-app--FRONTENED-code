@@ -1,0 +1,19 @@
+@import "../../css-config/mixins.scss";
+
+.main-content {
+  img {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .categoryy {
+    margin-top: 0;
+    border-top: 10px solid whitesmoke; 
+    margin-left: 60px;
+   
+  }
+  .productss {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}

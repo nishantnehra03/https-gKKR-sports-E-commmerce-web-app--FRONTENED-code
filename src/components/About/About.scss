@@ -1,0 +1,137 @@
+@import "../../css-config/mixins.scss";
+
+.main-about-container {
+  background-image: linear-gradient(to right, #361652, #e0d800);
+
+  img {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 400px;
+  }
+
+  .heading {
+    font-size: 30px;
+    margin-left: 16px;
+
+    // background-color: aliceblue;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 5px;
+
+      width: 50px;
+      height: 3px;
+      background-color: blueviolet;
+      @include md {
+        margin-top: 10px;
+      }
+    }
+  }
+  .stats-info {
+    .stats-info-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      gap: 50px;
+      @include md {
+        flex-direction: row;
+        gap: 100px;
+      }
+
+      .left {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: block;
+
+        height: 100%;
+        
+      }
+      .right {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        .title {
+          color: white;
+          align-items: center;
+          h3 {
+            font-weight: 800;
+          }
+          h4 {
+            font-size: 20px;
+            font-weight: 400;
+          }
+        }
+        .data-table {
+          font-size: 18px;
+          font-weight: 100;
+          color: white;
+          table,
+          th,
+          td {
+            padding: 2px;
+            margin: 2px;
+            border: 1px solid aliceblue;
+          }
+        }
+      }
+    }
+    .stats-bar {
+      margin-left: 70px;
+
+      display: flex;
+      flex-direction: column;
+
+      .set-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-right: 15px;
+        margin-bottom: 40px;
+
+        @include md {
+          flex-direction: row;
+        }
+        .item-stats {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          .year {
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 11px;
+            font-weight: bold;
+            background-color: #e0d800;
+            height: 40px;
+            width: 90px;
+            padding-top: 10px;
+          }
+          .perform {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+            color: beige;
+            margin-bottom: 3px;
+            font-weight: 100;
+          }
+          .performi {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+            color: wheat;
+            margin-bottom: 3px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

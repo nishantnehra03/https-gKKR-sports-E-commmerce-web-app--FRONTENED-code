@@ -1,0 +1,134 @@
+@import "../../css-config/mixins.scss";
+
+.footer {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #361652, #e0d800);
+  z-index:99;
+ // background-color: #361652;
+ 
+     
+  .footer-content {
+    padding: 50px 20px;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    @include md {
+      justify-content: space-between;
+      padding: 50px 0;
+    }
+    .col {
+      max-width: 300px;
+      &:nth-child(3) {
+        width: 150px;
+        @include md {
+          width: auto;
+        }
+      }
+      img{
+        height: 100px;
+      }
+      .title {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+      .text {
+        color:black;
+        font-size: 14px;
+        font-weight: 300;
+        font-style:italic;
+      }
+      .c-item {
+        display: flex;
+        margin-bottom: 10px;
+        svg {
+          flex-shrink: 0;
+          font-size: 14px;
+          margin-right: 10px;
+          margin-top: 4px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      span {
+        &.text {
+          display: block;
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    }
+  .follow{
+    text-align: center;
+    margin-bottom: 20px;
+        font-size: 20px;
+        
+        .c-item {
+            display: flex;
+             flex-direction: row;
+            justify-content: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+            
+            svg {
+              flex-shrink: 0;
+              font-size: 20px;
+            //  margin-right: 10px;
+               margin-top: 10px;
+               
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+
+
+    
+ }
+
+
+  .bottom-bar {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    //background-color: rgb(203, 139, 203);
+    .bottom-bar-content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      @include md {
+        padding: 0;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .text {
+        font-size: 12px;
+        font-weight: 400;
+        color: black;
+      }
+
+    .last{
+        display: flex;
+      flex-direction: row;
+      gap:30px;
+      width: 100%;
+      cursor: pointer;
+      @include  md{
+     width:40%
+      }
+      .text {
+        font-size: 12px;
+        font-weight: 300;
+        color: black;
+      }
+      }
+      
+    }
+  }
+}
